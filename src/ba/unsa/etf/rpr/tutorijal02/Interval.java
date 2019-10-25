@@ -44,9 +44,14 @@ public class Interval {
     public Interval intersect(Interval interval){
         double lijeva = this.tacka1<interval.tacka1?interval.tacka1:this.tacka1;
         double desna = this.tacka2<interval.tacka2?interval.tacka2:this.tacka2;
-        boolean islijeva = isIn(lijeva);
-        boolean isdesna = isIn(desna);
+        boolean islijeva = this.isIn(lijeva);
+        boolean isdesna = this.isIn(desna);
         return new Interval(lijeva,desna,islijeva,isdesna);
+    }
+    public static Interval intersect(Interval interval1, Interval interval2){
+
+        return interval1.intersect(interval2);
+
     }
 
 }
