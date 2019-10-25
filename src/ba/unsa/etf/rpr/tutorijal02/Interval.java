@@ -10,7 +10,7 @@ public class Interval {
         this.tacka2=tacka2;
         this.istacka1=istacka1;
         this.istacka2=istacka2;
-        if (tacka1<tacka2) throw new IllegalArgumentException("Tacka2 manja od Tacka1");
+        if (tacka1>tacka2) throw new IllegalArgumentException("Tacka2 manja od Tacka1");
 
     }
     public Interval (){
