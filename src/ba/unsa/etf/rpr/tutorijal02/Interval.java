@@ -41,11 +41,12 @@ public class Interval {
     public boolean isIn(double tacka){
         return this.tacka1 < tacka && tacka < this.tacka2;
     }
-    /*public Interval intersect(Interval interval){
+    public Interval intersect(Interval interval){
         double lijeva = this.tacka1<interval.tacka1?interval.tacka1:this.tacka1;
         double desna = this.tacka2<interval.tacka2?interval.tacka2:this.tacka2;
         boolean islijeva = isIn(lijeva);
         boolean isdesna = isIn(desna);
-    }*/
+        return new Interval(lijeva,desna,islijeva,isdesna);
+    }
 
 }
